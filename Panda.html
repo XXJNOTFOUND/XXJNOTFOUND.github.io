@@ -6,8 +6,7 @@
     <title>祥和熊猫</title>
     <style>
         body {
-            background-image: url("XXJNOTFOUND.github.io
-/_5ed57c8e6f34fe77e1a8ff23bbd23992_-1715401789_Cache_16b2bc30224b0993.jpg");
+            background-image: url("_5ed57c8e6f34fe77e1a8ff23bbd23992_-1715401789_Cache_16b2bc30224b0993.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -15,6 +14,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -25,8 +27,14 @@
         }
 
         main {
+            flex: 1;
             text-align: center;
             padding: 40px;
+        }
+
+        /* 去掉段落的默认间距 */
+        p {
+            margin: 0;
         }
 
         footer {
@@ -39,9 +47,8 @@
 </head>
 <body>
     <!-- 添加音乐 -->
-    <audio controls autoplay loop>
-        <source src="XXJNOTFOUND.github.io
-/蒋小呢 - 为了你.mp3" type="audio/mpeg">
+    <audio autoplay loop>
+        <source src="蒋小呢 - for ya.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -54,7 +61,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 祥和熊猫. LOVE FOREVER!</p>
+        <p>&copy; 2023 祥和熊猫. We will love forever!</p>
     </footer>
 </body>
 </html>

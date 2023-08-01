@@ -17,6 +17,8 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            align-items: center;
+            justify-content: center;
         }
 
         header {
@@ -55,6 +57,23 @@
             margin-top: 20px;
             display: inline-block;
         }
+
+        /* 动画效果 */
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .fade-in-out {
+            animation: fadeInOut 3s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>
@@ -66,16 +85,21 @@
         <p>他和他的爱情故事</p>
         <!-- 播放按钮 -->
         <div class="play-button" onclick="playMusic()">播放音乐</div>
+        <!-- 动画文字 -->
+        <div class="fade-in-out">
+            <p>宝，我们会相爱到永远，对吗？</p>
+            <p>一定会的，哪怕天荒地老</p>
+        </div>
     </main>
 
     <!-- 添加音乐 -->
     <audio id="audioPlayer" loop>
-        <source src="蒋小呢 - for ya.mp3"  type="audio/mpeg">
+        <source src="蒋小呢 - for ya.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
     <footer>
-        <p>&copy; 2023 祥和熊猫. All rights reserved.</p>
+        <p>&copy; 2023 祥和熊猫. LOVE FOREVER!</p>
     </footer>
 
     <script>

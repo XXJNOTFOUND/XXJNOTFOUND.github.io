@@ -43,47 +43,25 @@
             background-color: #ff1493; /* 粉红色页脚 */
             color: #fff;
         }
-
-        /* 播放按钮样式 */
-        .play-button {
-            background-color: #ffa500;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            display: inline-block;
-        }
     </style>
 </head>
 <body>
+    <!-- 添加音乐 -->
+    <audio autoplay loop>
+        <source src="蒋小呢 - for ya.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <header>
         <h1>祥和熊猫</h1>
     </header>
 
     <main>
         <p>他和他的爱情故事</p>
-        <!-- 播放按钮 -->
-        <div class="play-button" onclick="playMusic()">播放音乐</div>
     </main>
 
-    <!-- 添加音乐 -->
-    <audio id="audioPlayer" loop>
-        <source src="蒋小呢 - for ya.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
     <footer>
-        <p>&copy; 2023 祥和熊猫. LOVE FOREVER!</p>
+        <p>&copy; 2023 祥和熊猫. We will love forever!</p>
     </footer>
-
-    <script>
-        // JavaScript函数，点击按钮时播放音乐
-        function playMusic() {
-            var audio = document.getElementById('audioPlayer');
-            audio.play();
-        }
-    </script>
 </body>
 </html>

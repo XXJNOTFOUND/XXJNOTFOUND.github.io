@@ -52,7 +52,37 @@
         p {
             margin: 0;
         }
+
+        .credit {
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            color: #777;
+            font-size: 12px;
+        }
+
+        .credit-btn {
+            display: none;
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            background-color: #003366;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function showCredit() {
+            const creditDiv = document.getElementById('credit');
+            const creditBtn = document.getElementById('credit-btn');
+            creditDiv.style.display = 'block';
+            creditBtn.style.display = 'none';
+        }
+    </script>
 </head>
 
 <body>
@@ -101,6 +131,10 @@
     <footer>
         <p>4 · 3 We Are FAMILY!</p>
     </footer>
+
+    <button class="credit-btn" id="credit-btn" onclick="showCredit()">这是谁做的</button>
+    <div class="credit" id="credit" style="display: none;">Made by MTX</div>
 </body>
 
 </html>
+``

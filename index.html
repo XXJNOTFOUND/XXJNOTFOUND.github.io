@@ -1,113 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>祥和熊猫</title>
+    <title>永别了，化学老师！</title>
     <style>
         body {
-            background-image: url("_5ed57c8e6f34fe77e1a8ff23bbd23992_-1715401789_Cache_16b2bc30224b0993.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: #ffcccc; /* 粉红色背景 */
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
         }
 
         header {
-            background-color: #ff1493; /* 粉红色标题栏 */
+            background-color: #003366;
             color: #fff;
-            padding: 20px;
             text-align: center;
+            padding: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
         }
 
         main {
-            flex: 1;
-            text-align: center;
-            padding: 40px;
+            padding: 1rem;
         }
 
-        /* 去掉段落的默认间距 */
-        p {
+        section {
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
             margin: 0;
         }
 
         footer {
+            background-color: #003366;
+            color: #fff;
             text-align: center;
-            padding: 20px;
-            background-color: #ff1493; /* 粉红色页脚 */
-            color: #fff;
+            padding: 1rem 0;
         }
 
-        /* 播放按钮样式 */
-        .play-button {
-            background-color: #ffa500;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            display: inline-block;
-        }
-
-        /* 动画效果 */
-        @keyframes fadeInOut {
-            0% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .fade-in-out {
-            animation: fadeInOut 3s ease-in-out infinite;
+        p {
+            margin: 0;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>祥和熊猫</h1>
+        <h1>永别了，化学老师！</h1>
+        <h2>化学老师再见！</h2>
     </header>
 
     <main>
-        <p>他和他的爱情故事</p>
-        <!-- 播放按钮 -->
-        <div class="play-button" onclick="playMusic()">播放音乐</div>
-        <!-- 动画文字 -->
-        <div class="fade-in-out">
-            <p>宝，我们会相爱到永远，对吗？</p>
-            <p>一定会的，哪怕天荒地老</p>
-        </div>
+        <section>
+            <h3>简介</h3>
+            <p>
+                在这段时间里，我有幸拥有了一位杰出的化学老师，对您的教诲和关怀，我心存感激。您的引导和教导在我学习化学的路上起到了至关重要的作用，使我对化学产生了浓厚的兴趣和热爱。
+            </p>
+        </section>
+
+        <section>
+            <h3>回忆</h3>
+            <p>
+                我将永远珍藏与您一起度过的美好时光。您总是充满激情地向我们展示化学的奥妙，让实验课成为最期待的时刻。您幽默风趣的讲课方式和耐心解答我们的问题，使学习过程充满乐趣和启发。我将永远铭记您的教诲和关怀。
+            </p>
+        </section>
+
+        <section>
+            <h3>感谢</h3>
+            <p>
+                衷心感谢您在我学习过程中的辛勤付出和奉献。您的教导不仅仅是化学知识，更是培养了我的学习态度和价值观。您对学生的关心和鼓励，使我们在学业和生活中都能得到积极的成长。再次感谢您给予我的一切。
+            </p>
+        </section>
+
+        <section>
+            <h3>道别</h3>
+            <p>
+                在我即将离开这个学校之际，我愿向您送上最诚挚的祝福和告别。希望您在未来的道路上一帆风顺，继续用您的热情和智慧点亮更多学子的未来。虽然我们即将分别，但您永远是我心中敬爱的化学老师。
+            </p>
+        </section>
     </main>
 
-    <!-- 添加音乐 -->
-    <audio id="audioPlayer" loop>
-        <source src="蒋小呢 - for ya.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
     <footer>
-        <p>&copy; 2023 祥和熊猫. LOVE FOREVER!</p>
+        <p style="text-align: center;">4 · 3 We Are FAMILY!</p>
     </footer>
-
-    <script>
-        // JavaScript函数，点击按钮时播放音乐
-        function playMusic() {
-            var audio = document.getElementById('audioPlayer');
-            audio.play();
-        }
-    </script>
 </body>
+
 </html>

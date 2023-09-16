@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<!-- 
+       　  　▃▆█▇▄▖
+　 　 　 ▟◤▖　　　◥█▎
+   　 ◢◤　 ▐　　　 　▐▉
+　 ▗◤　　　▂　▗▖　　▕█▎
+　◤　▗▅▖◥▄　▀◣　　█▊
+▐　▕▎◥▖◣◤　　　　◢██
+█◣　◥▅█▀　　　　▐██◤
+▐█▙▂　　     　◢██◤
+◥██◣　　　　◢▄◤
+ 　　▀██▅▇▀
+哲学♂♂-->
+<!-- CODE by XXJ -->
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -37,13 +51,21 @@
             if (iqPattern.test(iq)) {
                 if (iq === "250") {
                     result.textContent = "你好聪明！";
+                } else if (iq.toLowerCase() === "傻逼") {
+                    result.textContent = "怎么说话的傻逼。";
                 } else if (iq.toLowerCase() === "liq") {
-                    result.textContent = "你还是有自知之明的。";
+                    result.textContent = "sb";
+                } else if (iq.toLowerCase() === "520") {
+                    result.textContent = "我也爱你。";
+                  } else if (iq.toLowerCase() === "1145") {
+                    result.textContent = "好臭"
+                } else if (iq.toLowerCase() === "CNM") {
+                    result.textContent = "你还是有自知之明的。";  
                 } else {
                     result.textContent = "你的智商为 " + iq;
                 }
             } else {
-                result.textContent = "请输入有效的智商值。";
+                result.textContent = "请输入有效的智商值!";
             }
         }
     </script>

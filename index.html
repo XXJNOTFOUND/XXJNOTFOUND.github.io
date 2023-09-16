@@ -1,105 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4 · 3，我们是一家人！</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #000;
-    color: #ccc;
-    margin: 0;
-    padding: 0;
-  }
-  .header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-  }
-  .content {
-    padding: 2rem;
-    text-align: left;
-  }
-  .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智商测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-<div class="header">
-  <h1>4 · 3，我们是一家人！</h1>
-</div>
-<div class="content">
-  <h2>班主任：张晶晶</h2>
-  <p>性格：热情、努力、认真，热爱自己的学生。</p>
-  <p>行为：</p>
-  <ul>
-    <li>常以“呀”为语气助词。</li>
-    <li>为我们买好吃的、雪糕等。</li>
-    <li>公平面对学生纠纷，为学生讲大道理。</li>
-  </ul>
-  <p>外号：晶晶姐（或者只因姐，有时又是只因只因姐，连起来像“君君姐”）。</p>
-  
-  <h2>数学老师：田锦</h2>
-  <p>性格：古怪，不易发怒，但一旦发怒就“GG”了。</p>
-  <p>行为：</p>
-  <ul>
-    <li>使用“橙色橡胶手”抚摸学生（笑）。</li>
-    <li>以“哎”为语气助词。</li>
-  </ul>
-  <p>外号：田哥、田姐。</p>
+    <div class="container">
+        <h1>我能知道你的智商</h1>
+        <input type="text" id="iqInput" placeholder="请输入你的智商" />
+        <button onclick="checkIQ()">提交</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function checkIQ() {
+            const iqInput = document.getElementById("iqInput");
+            const result = document.getElementById("result");
+            const iq = iqInput.value.trim();
+            const iqPattern = /^(\d+|liq)$/i;
 
-  <h2>语文老师：保密</h2>
-  <p>性格：活泼开朗，愿意用行动为学生带来欢笑，生气时眉头紧皱。</p>
-  <p>行为：</p>
-  <ul>
-    <li>跟班上的高XX发生争执，但还是能维持好关系。</li>
-    <li>在初二到初三时喜欢罚抄10遍。</li>
-  </ul>
-  <p>Tips：毕业后出去游山玩水，嫉妒死了。</p>
-  <p>外号：任姐、“任君er”（故意美化）。</p>
-
-  <h2>化学老师：李慧玲</h2>
-  <p>外号：“慧玲姐”。</p>
-  <p>性格：“往死活泼开朗却内心脆弱”，爱给学生讲故事，以前学生等等。</p>
-  <p>行为：</p>
-  <ul>
-    <li>给学生买雪糕，奖励学生小零食。</li>
-    <li>是同学们的化学启蒙老师！</li>
-  </ul>
-
-  <h2>物理老师：赵云国</h2>
-  <p>性格：死板，但是有很少的时候能逗学生开心。</p>
-  <p>外号：云国，当云国和其他物理老师走一起时被称为云国男团（云国男团刚下飞机就被粉丝围住，导致机场水泄不通）。</p>
-  <p>行为：</p>
-  <ul>
-    <li>讲透镜时举着透镜的台子像拿这个加特林。</li>
-    <li>问全班谁全对时采用了一对，俩对，一只等可爱的用语。</li>
-  </ul>
-
-  <h2>历史老师：孙丽芳</h2>
-  <p>性格：令人可以理解的死板，打学生会“斟酌”几分。</p>
-  <p>外号：孙姐。</p>
-  <p>行为：</p>
-  <ul>
-    <li>讲日本那片，讲到日本给唐朝进贡奴隶，奴隶写的是生口，全班（包括老师）失笑。</li>
-    <li>毕业那天，她告诉我们她这样做的原因（脾气暴躁）。</li>
-  </ul>
-
-  <h2>政治老师：白玉霞</h2>
-  <p>性格：时而开心，时而生气，令人捉摸不定。理解学生，让学生休息。</p>
-  <p>外号：白姐。</p>
-  <p>行为：</p>
-  <ul>
-    <li>在出去锻炼（练习体育考试）的回来的时候，让学生休息！</li>
-    <li>用自身压迫感让学生尽可能的考好！</li>
-  </ul>
-
-  <!-- 这里可以添加其他老师的信息 -->
-</div>
+            if (iqPattern.test(iq)) {
+                if (iq === "250") {
+                    result.textContent = "你好聪明！";
+                } else if (iq.toLowerCase() === "liq") {
+                    result.textContent = "你还是有自知之明的。";
+                } else {
+                    result.textContent = "你的智商为 " + iq;
+                }
+            } else {
+                result.textContent = "请输入有效的智商值。";
+            }
+        }
+    </script>
 </body>
 </html>

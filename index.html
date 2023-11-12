@@ -31,6 +31,14 @@
         input {
             margin-bottom: 10px;
         }
+        .copyright {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f9f9f9;
+        }
     </style>
 </head>
 <body>
@@ -40,12 +48,15 @@
         <button onclick="checkIQ()">提交</button>
         <p id="result"></p>
     </div>
+    <div class="copyright">
+        <p>所有版权归iXiangPro所有</p>
+    </div>
     <script>
         function checkIQ() {
             const iqInput = document.getElementById("iqInput");
             const result = document.getElementById("result");
             const iq = iqInput.value.trim();
-            const iqPattern = /^(\d+|liq)$/i;
+            const iqPattern = /^(\d+|liq|server|porn)$/i;
 
             if (iqPattern.test(iq)) {
                 if (iq === "250") {
@@ -58,6 +69,10 @@
                     result.textContent = "好臭"
                 } else if (iq.toLowerCase() === "CNM") {
                     result.textContent = "你还是有自知之明的。";  
+                } else if (iq.toLowerCase() === "server") {
+                    result.textContent = "「关键词」服务器地址me.huafi.top:40730";  
+                } else if (iq.toLowerCase() === "porn") {
+                    result.innerHTML = '<a href="https://cn.pornhub.com" target="_blank">cn.pornhub.com</a>, <a href="https://xvideos.com" target="_blank">xvideos.com</a>';  
                 } else {
                     result.textContent = "你的智商为 " + iq;
                 }
